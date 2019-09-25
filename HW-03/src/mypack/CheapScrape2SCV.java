@@ -31,9 +31,12 @@ public class CheapScrape2SCV
                 {
                     out.print("\"" + hold + "\"");
                 }
-                //out.print(hold);
-                
+                else 
+                {
+                    out.print(hold);
+                }
             }
+            out.println("");
             
         }
         
