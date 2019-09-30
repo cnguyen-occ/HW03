@@ -26,19 +26,25 @@ public class CheapScrape2SCV
         {
             for(int i = 0; i < columns; i++)
             {
-                String hold = in.nextLine();
+                String hold = in.nextLine().trim();
                 if(i == 1)
                 {
-                    out.print("\"" + hold + "\"");
+                    out.print("\"" + hold + "\",");
+                }
+                else if(i == (columns - 1))
+                {
+                	out.print(hold);
                 }
                 else 
                 {
-                    out.print(hold);
+                    out.print(hold + ", ");
                 }
             }
             out.println("");
             
         }
+        in.close();
+        out.close();
         
         
 
